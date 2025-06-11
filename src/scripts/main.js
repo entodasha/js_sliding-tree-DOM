@@ -5,11 +5,9 @@ const tree = document.querySelector('.tree');
 for (const li of document.querySelectorAll('li')) {
   const span = document.createElement('span');
 
-  li.prepend(span);
+  span.append(...li.childNodes);
 
-  while (span.nextSibling) {
-    span.append(span.nextSibling);
-  }
+  li.append(span);
 }
 
 tree.onclick = function (e) {
