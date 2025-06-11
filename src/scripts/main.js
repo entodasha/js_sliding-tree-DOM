@@ -16,6 +16,6 @@ tree.onclick = function (e) {
 
     if (childrenContainer) {
       childrenContainer.hidden = !childrenContainer.hidden;
-    }
+    } 
   }
 };
