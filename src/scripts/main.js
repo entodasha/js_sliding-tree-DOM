@@ -6,7 +6,10 @@ for (const li of document.querySelectorAll('li')) {
   const span = document.createElement('span');
 
   li.prepend(span);
-  span.append(span.nextSibling);
+
+  while (span.nextSibling) {
+    span.append(span.nextSibling);
+  }
 }
 
 tree.onclick = function (e) {
